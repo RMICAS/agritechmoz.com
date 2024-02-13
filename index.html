@@ -31,6 +31,31 @@
       <span style="font-size:40px;cursor:pointer;color:white;position:absolute;right: 0;margin-right: 20px;" onclick="openNav()">&#9776;</span>
       
   </header>
+
+  <div id="google_translate_element"></div>
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement(
+      { pageLanguage: 'en' }, // Set the default language (e.g., English)
+      'google_translate_element'
+    );
+  }
+
+  // Replace the innerHTML of the generated select with your custom labels
+  var googleDropdown = document.querySelector("#google_translate_element .goog-te-combo");
+  var customDropdown = document.querySelector("#custom-translate");
+  googleDropdown.innerHTML = customDropdown.innerHTML;
+</script>
+
+<!-- Your custom select -->
+<select id="custom-translate" style="display: none;">
+  <option value="">Select Language</option>
+  <option value="af">Afrikaans</option>
+  <!-- Add other language options here -->
+</select>
+
+
+
   <main>
     <div class="container">
       <img src="assets/images/home-image-square.png" alt="hero image">
@@ -419,11 +444,15 @@ development projects.
     <img src="assets/images/Agritech-logo.png">
   </div>
   <div class="footer-description">
-    <p>Copyright © Mobiz Agritechnologies Studio 2022. All Rights Reserved ®</p>
+    <p>Copyright © Mobiz Agritechnologies Studio 2024. All Rights Reserved ®</p>
   </div>
 </footer>
 
 <!-- FOOTER END -->
+
+
+
+
 
 <script>
   function openNav() {
@@ -434,6 +463,16 @@ development projects.
     document.getElementById("myNav").style.width = "0%";
   }
   </script>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement(
+      { pageLanguage: 'en' }, // Set the default language (e.g., English)
+      'google_translate_element' // Specify the ID of the translation element
+    );
+  }
+</script>
 
 </body>
 </html>

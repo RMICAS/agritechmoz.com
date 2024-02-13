@@ -111,6 +111,7 @@ header {
   .container img {
     width: 90%;
     margin-top: 50;
+    padding-bottom: 30px;
   }
   
   .hero-text {
@@ -119,6 +120,7 @@ header {
   
   .hero-text h1 {
     font-size: 2.5rem;
+    font-weight: bolder;
     margin-bottom: 12px;
     color: #ffffff;
   }
@@ -138,8 +140,23 @@ header {
     text-align: center;
     color:#308206;
     margin-top: 40px;
+    margin-bottom: 60px;
     text-transform: uppercase;
-    
+    font-weight: bold;
+    text-decoration: none;
+    position: relative; 
+  }
+
+  .main-heading::after {
+    content: '';
+    background: #308206;
+    display: block;
+    width: 200px;
+    height: 2.5px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 45px;
   }
 
   .grid-container {
@@ -364,7 +381,7 @@ align-items: center;
  padding: 10px;
  margin-bottom: 10px;
  background-color: #97c082;
- color: white;
+ color: rgb(250, 250, 250);
  font-size: 20px;
  border-style: solid;
  border-color: #97c082;
@@ -429,7 +446,6 @@ footer {
   
   @media (max-width: 884px) {
     .container {
-      margin-top: 10px;
       flex-direction: row-reverse;
     }
     .hero-text {
@@ -467,8 +483,8 @@ footer {
     }
 
 
-    .logo img {
-      width:300px;
+    header .logo img {
+      width: 250px;
       position: absolute;
       left: 0;
     }
@@ -490,9 +506,6 @@ footer {
     }
   }
   @media (max-width: 428px) {
-    nav ul {
-      display: none;    
-    }
     .container {
       margin-left: 10px;
       margin-right: 10px;
@@ -500,8 +513,12 @@ footer {
 
     }
 
-    .logo img {
-      width:300px;
+    .container img {
+      padding-bottom: 5px;
+    }
+
+    header .logo img {
+      width:250px;
       position: absolute;
       left: 0;
     }
