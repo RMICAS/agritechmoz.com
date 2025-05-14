@@ -18,6 +18,19 @@
   <link rel="icon" type="image/x-icon" href="/assets/images/favicon.png">
   <!-- Add Splide's CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+  <!-- Google Translate Element -->
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'en,pt',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+        autoDisplay: false,
+        multilanguagePage: true
+      }, 'google_translate_element');
+    }
+  </script>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </head>
 <body>
 
@@ -32,16 +45,16 @@
       <div id="myNav" class="overlay">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <div class="overlay-content">
-          <a href="https://blog.agritechmoz.com" data-translate="blog">Blog</a>
-          <a href="#section2" data-translate="services">Services</a>
-          <a href="#section3" data-translate="methodology">Methodology</a>
-          <a href="#section4" data-translate="about">About us</a>
-          <a href="#section5" data-translate="contact">Contact</a>
+          <a href="https://blog.agritechmoz.com">Blog</a>
+          <a href="#section2">Services</a>
+          <a href="#section3">Methodology</a>
+          <a href="#section4">About us</a>
+          <a href="#section5">Contact</a>
         </div>
       </div>
     
     <div class="language-switcher">
-      <button id="languageBtn" onclick="toggleLanguage()" data-translate="PT">PT</button>
+      <div id="google_translate_element"></div>
     </div>
     
     <span style="font-size:40px;cursor:pointer;color:white;position:absolute;right: 0;margin-right: 20px;" onclick="openNav()">&#9776;</span>
@@ -52,10 +65,7 @@
     <div class="container">
       <img src="assets/images/home-image-square.png" alt="hero image">
       <div class="hero-text">
-        <h1 data-translate="heroTitle">FUSING THE POWER OF
-            TECHNOLOGY &
-            AGRICULTURE FOR A
-            BETTER TOMORROW</h1>
+        <h1>FUSING THE POWER OF TECHNOLOGY & AGRICULTURE FOR A BETTER TOMORROW</h1>
       </div>
     </div>
   </main>
@@ -67,7 +77,7 @@
 
   <div class="services-section">
 
-    <h1 class="main-heading"  id="section2" data-translate="servicesTitle">OUR PRODUCTS AND SERVICES</h1>
+    <h1 class="main-heading"  id="section2">OUR PRODUCTS AND SERVICES</h1>
 
     <div class="grid-container">
 
@@ -78,13 +88,13 @@
                 <img src="assets/images/Digital-Technical-Extention-dark.png" alt="globe">
               </div>
             <div class="card-title">
-              <h2 class="title" data-translate="digitalExtension">Digital Technical
+              <h2 class="title">Digital Technical
                 Extension</h2>
             </div>
 
             </div>
 
-            <p data-translate="digitalExtensionDesc">
+            <p>
             Our mobile technology is highly
             customizable to fit the complex
             workflows & real challenges of agriculture
@@ -104,13 +114,13 @@
                 <img src="assets/images/Agribusiness-Development-dark.png" alt="plant">
               </div>
             <div class="card-title">
-              <h2 class="title" data-translate="agribusinessDev">Agribusiness
+              <h2 class="title">Agribusiness
                 Development</h2>
             </div>
 
             </div>
 
-            <p data-translate="agribusinessDevDesc">
+            <p>
               Our team will help your business reap
               the full benefit of technology through
               process analysis & optimization, field
@@ -128,13 +138,13 @@
                 <img src="assets/images/Software-Development-Dark.png" class="software-development" alt="globe">
               </div>
             
-              <h2 class="title" data-translate="softwareDev">Software Development &
+              <h2 class="title">Software Development &
                 Digital Marketing</h2>
         
 
             </div>
 
-            <p data-translate="softwareDevDesc">
+            <p>
             Our mobile technology is highly
             customizable to fit the complexity
             workflows & real ties of agriculture
@@ -150,7 +160,7 @@
 
     <div class="info-button">
 
-      <button><a href="#section5"><p data-translate="contactUs">Contact us</p></a></button>
+      <button><a href="#section5"><p>Contact us</p></a></button>
 
     </div>
 
@@ -164,7 +174,7 @@
   <div class="methodology-section">
 
     <div class="main-heading-section">
-    <h1 class="main-heading" id="section3" data-translate="methodologyTitle">OUR METHODOLOGY</h1>
+    <h1 class="main-heading" id="section3">OUR METHODOLOGY</h1>
   </div>
 
     <div class="grid-container">
@@ -178,12 +188,12 @@
               <img src="assets/images/Business-Analysis-Dark.png" alt="globe">
             </div>
           <div class="card-title">
-            <h2 class="title b-analysis" data-translate="businessAnalysis">Business Analysis</h2>
+            <h2 class="title b-analysis">Business Analysis</h2>
           </div>
 
           </div>
 
-          <p data-translate="businessAnalysisDesc">
+          <p>
             Our very first step is to conduct a deep
             study on all the processes involved in
             your domain, so that we can really
@@ -200,12 +210,12 @@
               <img src="assets/images/Solution-Design-Dark.png" alt="plant">
             </div>
           <div class="card-title">
-            <h2 class="title s-design" data-translate="solutionDesign">Solution Design</h2>
+            <h2 class="title s-design">Solution Design</h2>
           </div>
 
           </div>
 
-          <p data-translate="solutionDesignDesc">
+          <p>
             Then, we think of ways in which our
             software can be useful to you and see
             if there are any specific modifications
@@ -227,12 +237,12 @@
               <img src="assets/images/Solution-Development-Dark.png" alt="globe">
             </div>
           
-            <h2 class="title s-dev" data-translate="solutionDev">Solutions Development</h2>
+            <h2 class="title s-dev">Solutions Development</h2>
       
 
           </div>
 
-          <p data-translate="solutionDevDesc">
+          <p>
             This is the moment in which we work
             closely with your team to review, test,
             pilot and improve the solution we
@@ -249,12 +259,12 @@
               <img src="assets/images/Field-Deployment-Dark.png" alt="globe">
             </div>
           
-            <h2 class="title s-dep" data-translate="fieldDeployment">Field Deployment</h2>
+            <h2 class="title s-dep">Field Deployment</h2>
       
 
           </div>
 
-          <p data-translate="fieldDeploymentDesc">
+          <p>
             Now that everything is ready, we can
             go to the field to deploy the solutions
             and provide technical and managerial
@@ -270,7 +280,7 @@
     </div>
     <div class="info-button">
       <a href="assets/Documents/AgritechMoz-Presentation.pdf" download>
-        <button><p data-translate="downloadPresentation">Download our Presentation</p></button>
+        <button><p>Download our Presentation</p></button>
       </a>
     </div>
     
@@ -287,10 +297,10 @@
 
 <div class="about-section">
   <div class="about-text">
-    <h2 class="title" id="section4" data-translate="whoWeAre">WHO WE ARE</h2>
+    <h2 class="title" id="section4">WHO WE ARE</h2>
 
     <div class="innner-paragraph">
-    <p data-translate="aboutDesc1">
+    <p>
       AgritechMoz is a digital consultancy firm
 specializing in agriculture and small
 business. Our team is composed of a group
@@ -301,7 +311,7 @@ consulting.</p>
 
 <br>
 
-<p data-translate="aboutDesc2">With access to a robust network of
+<p>With access to a robust network of
 cross-sectorial domain experts, branching
 out into digital marketing, health-tech and
 edtech our team can support in the planning
@@ -324,7 +334,7 @@ development projects.
 
 <div class="more-info">
 
-    <h1 class="main-heading" data-translate="globalImpact">CREATING A GLOBAL IMPACT</h1>
+    <h1 class="main-heading">CREATING A GLOBAL IMPACT</h1>
 
     <div class="grid-container">
 
@@ -335,12 +345,12 @@ development projects.
                 <img src="assets/images/Contries-Dark.png" alt="globe">
               </div>
             <div class="card-title">
-              <h2 class="title" data-translate="countries">5 Countries</h2>
+              <h2 class="title">5 Countries</h2>
             </div>
 
             </div>
 
-            <p data-translate="countriesDesc">
+            <p>
               Our team have experience in
               conducting projects for clients in
               Africa, Asia, Europe and North
@@ -356,12 +366,12 @@ development projects.
                 <img src="assets/images/Value-Chains-Dark.png" alt="plant">
               </div>
             <div class="card-title">
-              <h2 class="title" data-translate="valueChains">8 Value Chains</h2>
+              <h2 class="title">8 Value Chains</h2>
             </div>
 
             </div>
 
-            <p data-translate="valueChainsDesc">
+            <p>
               Our collective experience spans work
               in Agriculture (Cashew, Rice,
               Sugarcane, Wheat, Potato), Finance
@@ -377,12 +387,12 @@ development projects.
                 <img src="assets/images/Farmers-Dark.png" alt="globe">
               </div>
             
-              <h2 class="title" data-translate="farmers">+300,000 farmers</h2>
+              <h2 class="title">+300,000 farmers</h2>
         
 
             </div>
 
-            <p data-translate="farmersDesc">
+            <p>
               Collectively, our team have supported
               projects in the digital transformation
               of over 300,000 smallholder farmers
@@ -398,7 +408,7 @@ development projects.
 
 <!-- PARTNERS CAROUSEL -->
 <div class="partners-section">
-  <h1 class="main-heading" data-translate="partners">OUR PARTNERS</h1>
+  <h1 class="main-heading">OUR PARTNERS</h1>
 
   <div class="splide partners-splide">
     <div class="splide__track">
@@ -418,7 +428,7 @@ development projects.
 <!-- CONTACT US -->
 
 <div class="contact-us">
-  <h1 class="main-heading" id="section5" data-translate="contactTitle">CONTACT US</h1>
+  <h1 class="main-heading" id="section5">CONTACT US</h1>
 
 
 <div class="contact">
@@ -428,12 +438,12 @@ development projects.
   </div>
   <div class="contact-form">
       <form action="https://formspree.io/f/meqygqnn" method="post">
-          <input type="text" name="Name" placeholder="Name" data-translate="name">
-          <input type="text" name="Phone" placeholder="Phone Number" data-translate="phone">
-          <input type="email" name="Email" placeholder="Email" data-translate="email">
-          <input type="text" name="Subject" placeholder="Subject" data-translate="subject">
-          <textarea name="Message" placeholder="Message" data-translate="message"></textarea>
-          <button type="submit"><p data-translate="sendMessage">Drop us a Message!</p></button>
+          <input type="text" name="Name" placeholder="Name">
+          <input type="text" name="Phone" placeholder="Phone Number">
+          <input type="email" name="Email" placeholder="Email">
+          <input type="text" name="Subject" placeholder="Subject">
+          <textarea name="Message" placeholder="Message"></textarea>
+          <button type="submit"><p>Drop us a Message!</p></button>
       </form>
   </div>
 </div>
@@ -450,7 +460,7 @@ development projects.
     <img src="assets/images/Agritech-logo.png">
   </div>
   <div class="footer-description">
-    <p data-translate="copyright">Copyright © Mobiz Agritechnologies Studio 2024. All Rights Reserved ®</p>
+    <p>Copyright © Mobiz Agritechnologies Studio 2024. All Rights Reserved ®</p>
   </div>
 </footer>
 
