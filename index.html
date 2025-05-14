@@ -1,11 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MTDTFY6194"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MTDTFY6194');
+</script>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AgritechMoz</title>
   <link rel="stylesheet" href="assets/CSS/style.css">
+  <link rel="icon" type="image/x-icon" href="/assets/images/favicon.png">
+  <!-- Add Splide's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
 </head>
 <body>
 
@@ -20,56 +32,30 @@
       <div id="myNav" class="overlay">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <div class="overlay-content">
-          <a href="https://blog.agritechmoz.com">Blog</a>
-          <a href="#section2">Services</a>
-          <a href="#section3">Methodology</a>
-          <a href="#section4">About us</a>
-          <a href="#section5">Contact</a>
+          <a href="https://blog.agritechmoz.com" data-translate="blog">Blog</a>
+          <a href="#section2" data-translate="services">Services</a>
+          <a href="#section3" data-translate="methodology">Methodology</a>
+          <a href="#section4" data-translate="about">About us</a>
+          <a href="#section5" data-translate="contact">Contact</a>
         </div>
       </div>
     
-      <span style="font-size:40px;cursor:pointer;color:white;position:absolute;right: 0;margin-right: 20px;" onclick="openNav()">&#9776;</span>
+    <div class="language-switcher">
+      <button id="languageBtn" onclick="toggleLanguage()" data-translate="PT">PT</button>
+    </div>
+    
+    <span style="font-size:40px;cursor:pointer;color:white;position:absolute;right: 0;margin-right: 20px;" onclick="openNav()">&#9776;</span>
       
   </header>
-
-  <div id="google_translate_element"></div>
-<script type="text/javascript">
-  function googleTranslateElementInit() {
-    new google.translate.TranslateElement(
-      { pageLanguage: 'en' }, // Set the default language (e.g., English)
-      'google_translate_element'
-    );
-  }
-
-  // Replace the innerHTML of the generated select with your custom labels
-  var googleDropdown = document.querySelector("#google_translate_element .goog-te-combo");
-  var customDropdown = document.querySelector("#custom-translate");
-  googleDropdown.innerHTML = customDropdown.innerHTML;
-</script>
-
-<!-- Your custom select -->
-<select id="custom-translate" style="display: none;">
-  <option value="">Select Language</option>
-  <option value="af">Afrikaans</option>
-  <!-- Add other language options here -->
-</select>
-
-
 
   <main>
     <div class="container">
       <img src="assets/images/home-image-square.png" alt="hero image">
       <div class="hero-text">
-        <h1>FUSING POWER OF
-            TECHONOLOGY &
+        <h1 data-translate="heroTitle">FUSING THE POWER OF
+            TECHNOLOGY &
             AGRICULTURE FOR A
             BETTER TOMORROW</h1>
-        <p>Lorem ipsum dolor sit amet, consectetuer
-            adipiscing elit, sed diam nonummy nibh
-            euismod tincidunt ut laoreet dolore sed
-            diam nonummy nibh euismod tincidunt ut
-            laoreet doloreю
-        </p>
       </div>
     </div>
   </main>
@@ -77,9 +63,11 @@
 
     <!-- SERVICES -->
 
+
+
   <div class="services-section">
 
-    <h1 class="main-heading"  id="section2">OUR PRODUCTS AND SERVICES</h1>
+    <h1 class="main-heading"  id="section2" data-translate="servicesTitle">OUR PRODUCTS AND SERVICES</h1>
 
     <div class="grid-container">
 
@@ -90,16 +78,16 @@
                 <img src="assets/images/Digital-Technical-Extention-dark.png" alt="globe">
               </div>
             <div class="card-title">
-              <h2 class="title">Digital Technical
+              <h2 class="title" data-translate="digitalExtension">Digital Technical
                 Extension</h2>
             </div>
 
             </div>
 
-            <p>
+            <p data-translate="digitalExtensionDesc">
             Our mobile technology is highly
-            customizable to fit the complexity
-            workflows & real ties of agriculture
+            customizable to fit the complex
+            workflows & real challenges of agriculture
             and small business.
             Coupled with our insightful reporting
             & data analysis dashboard, your team
@@ -116,13 +104,13 @@
                 <img src="assets/images/Agribusiness-Development-dark.png" alt="plant">
               </div>
             <div class="card-title">
-              <h2 class="title">Agribusiness
+              <h2 class="title" data-translate="agribusinessDev">Agribusiness
                 Development</h2>
             </div>
 
             </div>
 
-            <p>
+            <p data-translate="agribusinessDevDesc">
               Our team will help your business reap
               the full benefit of technology through
               process analysis & optimization, field
@@ -137,16 +125,16 @@
               
             <div class="card-details">
             <div class="card-icon">
-                <img src="assets/images/Software-Development-Dark.png" alt="globe">
+                <img src="assets/images/Software-Development-Dark.png" class="software-development" alt="globe">
               </div>
             
-              <h2 class="title">Software Development &
+              <h2 class="title" data-translate="softwareDev">Software Development &
                 Digital Marketing</h2>
         
 
             </div>
 
-            <p>
+            <p data-translate="softwareDevDesc">
             Our mobile technology is highly
             customizable to fit the complexity
             workflows & real ties of agriculture
@@ -162,7 +150,7 @@
 
     <div class="info-button">
 
-      <button><p>Contact-us</p></button>
+      <button><a href="#section5"><p data-translate="contactUs">Contact us</p></a></button>
 
     </div>
 
@@ -176,7 +164,7 @@
   <div class="methodology-section">
 
     <div class="main-heading-section">
-    <h1 class="main-heading" id="section3">OUR METHODOLOGY</h1>
+    <h1 class="main-heading" id="section3" data-translate="methodologyTitle">OUR METHODOLOGY</h1>
   </div>
 
     <div class="grid-container">
@@ -190,12 +178,12 @@
               <img src="assets/images/Business-Analysis-Dark.png" alt="globe">
             </div>
           <div class="card-title">
-            <h2 class="title">Business Analysis</h2>
+            <h2 class="title b-analysis" data-translate="businessAnalysis">Business Analysis</h2>
           </div>
 
           </div>
 
-          <p>
+          <p data-translate="businessAnalysisDesc">
             Our very first step is to conduct a deep
             study on all the processes involved in
             your domain, so that we can really
@@ -212,13 +200,13 @@
               <img src="assets/images/Solution-Design-Dark.png" alt="plant">
             </div>
           <div class="card-title">
-            <h2 class="title">Solution Design</h2>
+            <h2 class="title s-design" data-translate="solutionDesign">Solution Design</h2>
           </div>
 
           </div>
 
-          <p>
-            Then, we thing of ways in which our
+          <p data-translate="solutionDesignDesc">
+            Then, we think of ways in which our
             software can be useful to you and see
             if there are any specific modifications
             that would increase your impact
@@ -239,12 +227,12 @@
               <img src="assets/images/Solution-Development-Dark.png" alt="globe">
             </div>
           
-            <h2 class="title">Solutions Development</h2>
+            <h2 class="title s-dev" data-translate="solutionDev">Solutions Development</h2>
       
 
           </div>
 
-          <p>
+          <p data-translate="solutionDevDesc">
             This is the moment in which we work
             closely with your team to review, test,
             pilot and improve the solution we
@@ -261,12 +249,12 @@
               <img src="assets/images/Field-Deployment-Dark.png" alt="globe">
             </div>
           
-            <h2 class="title">Field Deployment</h2>
+            <h2 class="title s-dep" data-translate="fieldDeployment">Field Deployment</h2>
       
 
           </div>
 
-          <p>
+          <p data-translate="fieldDeploymentDesc">
             Now that everything is ready, we can
             go to the field to deploy the solutions
             and provide technical and managerial
@@ -280,12 +268,12 @@
 
       
     </div>
-
     <div class="info-button">
-
-      <button><p>Download our Presentation</p></button>
-
+      <a href="assets/Documents/AgritechMoz-Presentation.pdf" download>
+        <button><p data-translate="downloadPresentation">Download our Presentation</p></button>
+      </a>
     </div>
+    
 
   </div>
 
@@ -299,10 +287,10 @@
 
 <div class="about-section">
   <div class="about-text">
-    <h2 class="title" id="section4">WHO WE ARE</h2>
+    <h2 class="title" id="section4" data-translate="whoWeAre">WHO WE ARE</h2>
 
     <div class="innner-paragraph">
-    <p>
+    <p data-translate="aboutDesc1">
       AgritechMoz is a digital consultancy firm
 specializing in agriculture and small
 business. Our team is composed of a group
@@ -313,7 +301,7 @@ consulting.</p>
 
 <br>
 
-<p>With access to a robust network of
+<p data-translate="aboutDesc2">With access to a robust network of
 cross-sectorial domain experts, branching
 out into digital marketing, health-tech and
 edtech our team can support in the planning
@@ -321,8 +309,7 @@ edtech our team can support in the planning
 development projects.
     </p>
   </div>
-    <button><p>Talk to Us</p></button>
-
+   
   </div>
   
   
@@ -337,7 +324,7 @@ development projects.
 
 <div class="more-info">
 
-    <h1 class="main-heading">CREATING A GLOBAL IMPACT</h1>
+    <h1 class="main-heading" data-translate="globalImpact">CREATING A GLOBAL IMPACT</h1>
 
     <div class="grid-container">
 
@@ -348,15 +335,15 @@ development projects.
                 <img src="assets/images/Contries-Dark.png" alt="globe">
               </div>
             <div class="card-title">
-              <h2 class="title">5 Countries</h2>
+              <h2 class="title" data-translate="countries">5 Countries</h2>
             </div>
 
             </div>
 
-            <p>
+            <p data-translate="countriesDesc">
               Our team have experience in
               conducting projects for clients in
-              Africa, Asia, Europe amd North
+              Africa, Asia, Europe and North
               America.
             </p>
         
@@ -369,17 +356,17 @@ development projects.
                 <img src="assets/images/Value-Chains-Dark.png" alt="plant">
               </div>
             <div class="card-title">
-              <h2 class="title">7 Value Chains</h2>
+              <h2 class="title" data-translate="valueChains">8 Value Chains</h2>
             </div>
 
             </div>
 
-            <p>
+            <p data-translate="valueChainsDesc">
               Our collective experience spans work
               in Agriculture (Cashew, Rice,
               Sugarcane, Wheat, Potato), Finance
               (Rural Banking, Cooperative
-              Management)
+              Management) and Poultry
             </p>
         
           </div>
@@ -390,12 +377,12 @@ development projects.
                 <img src="assets/images/Farmers-Dark.png" alt="globe">
               </div>
             
-              <h2 class="title">+300,000 farmers</h2>
+              <h2 class="title" data-translate="farmers">+300,000 farmers</h2>
         
 
             </div>
 
-            <p>
+            <p data-translate="farmersDesc">
               Collectively, our team have supported
               projects in the digital transformation
               of over 300,000 smallholder farmers
@@ -409,10 +396,29 @@ development projects.
 
 <!-- CREATING A GLOBAL IMPACT END -->
 
+<!-- PARTNERS CAROUSEL -->
+<div class="partners-section">
+  <h1 class="main-heading" data-translate="partners">OUR PARTNERS</h1>
+
+  <div class="splide partners-splide">
+    <div class="splide__track">
+      <ul class="splide__list">
+        <li class="splide__slide"><div class="partner-item"><img src="assets/images/partners/1.png" alt="Partner 1"></div></li>
+        <li class="splide__slide"><div class="partner-item"><img src="assets/images/partners/2.png" alt="Partner 2"></div></li>
+        <li class="splide__slide"><div class="partner-item"><img src="assets/images/partners/3.png" alt="Partner 3"></div></li>
+        <li class="splide__slide"><div class="partner-item"><img src="assets/images/partners/4.png" alt="Partner 4"></div></li>
+        <li class="splide__slide"><div class="partner-item"><img src="assets/images/partners/5.png" alt="Partner 5"></div></li>
+        <li class="splide__slide"><div class="partner-item"><img src="assets/images/partners/6.png" alt="Partner 6"></div></li>
+        <li class="splide__slide"><div class="partner-item"><img src="assets/images/partners/7.png" alt="Partner 7"></div></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
 <!-- CONTACT US -->
 
 <div class="contact-us">
-  <h1 class="main-heading" id="section5">CONTACT US</h1>
+  <h1 class="main-heading" id="section5" data-translate="contactTitle">CONTACT US</h1>
 
 
 <div class="contact">
@@ -421,13 +427,13 @@ development projects.
     <img src="assets/images/contact-us.png" alt="contact us">
   </div>
   <div class="contact-form">
-      <form>
-          <input type="text" placeholder="Name">
-          <input type="text" placeholder="Phone Number">
-          <input type="email" placeholder="Email">
-          <input type="text" placeholder="Subject">
-          <textarea placeholder="Message"></textarea>
-          <button type="submit">Drop us a Message!</button>
+      <form action="https://formspree.io/f/meqygqnn" method="post">
+          <input type="text" name="Name" placeholder="Name" data-translate="name">
+          <input type="text" name="Phone" placeholder="Phone Number" data-translate="phone">
+          <input type="email" name="Email" placeholder="Email" data-translate="email">
+          <input type="text" name="Subject" placeholder="Subject" data-translate="subject">
+          <textarea name="Message" placeholder="Message" data-translate="message"></textarea>
+          <button type="submit"><p data-translate="sendMessage">Drop us a Message!</p></button>
       </form>
   </div>
 </div>
@@ -444,33 +450,55 @@ development projects.
     <img src="assets/images/Agritech-logo.png">
   </div>
   <div class="footer-description">
-    <p>Copyright © Mobiz Agritechnologies Studio 2024. All Rights Reserved ®</p>
+    <p data-translate="copyright">Copyright © Mobiz Agritechnologies Studio 2024. All Rights Reserved ®</p>
   </div>
 </footer>
 
 <!-- FOOTER END -->
 
-
-
-
+<!-- Add translations.js before other scripts -->
+<script src="assets/js/translations.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
 
 <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Initialize Splide
+    new Splide('.partners-splide', {
+      type: 'slide',
+      perPage: 5,
+      perMove: 1,
+      gap: '2rem',
+      pagination: false,
+      arrows: true,
+      drag: true,
+      snap: true,
+      breakpoints: {
+        1200: {
+          perPage: 5,
+          gap: '2rem'
+        },
+        768: {
+          perPage: 3,
+          gap: '1.5rem'
+        },
+        480: {
+          perPage: 2,
+          gap: '1rem'
+        },
+        0: {
+          perPage: 2,
+          gap: '1rem'
+        }
+      }
+    }).mount();
+  });
+
   function openNav() {
     document.getElementById("myNav").style.width = "100%";
   }
   
   function closeNav() {
     document.getElementById("myNav").style.width = "0%";
-  }
-  </script>
-
-<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-<script type="text/javascript">
-  function googleTranslateElementInit() {
-    new google.translate.TranslateElement(
-      { pageLanguage: 'en' }, // Set the default language (e.g., English)
-      'google_translate_element' // Specify the ID of the translation element
-    );
   }
 </script>
 
