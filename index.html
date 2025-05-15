@@ -42,6 +42,43 @@
       color: #308106;
     }
 
+    .partner-caption {
+      text-align: center;
+      margin-top: 10px;
+      font-size: 14px;
+      color: #333;
+      font-weight: 500;
+    }
+
+    .partner-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .partner-item img {
+      max-width: 100%;
+      height: auto;
+      transition: transform 0.3s ease;
+    }
+
+    .partner-item a {
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .partner-item:hover img {
+      transform: scale(1.05);
+    }
+
+    .partner-item:hover .partner-caption {
+      color: #308106;
+    }
+
     @media (max-width: 768px) {
       .language-switcher {
         top: 15px;
@@ -51,6 +88,11 @@
       .language-btn {
         padding: 6px 12px;
         font-size: 12px;
+      }
+
+      .partner-caption {
+        font-size: 12px;
+        margin-top: 8px;
       }
     }
   </style>
@@ -413,19 +455,77 @@
 
 <!-- PARTNERS CAROUSEL -->
 <div class="partners-section">
-  <h1 class="main-heading">OUR PARTNERS</h1>
+  <h1 class="main-heading" data-en="OUR PARTNERS" data-pt="NOSSO PARCEIROS">OUR PARTNERS</h1>
+  
+
 
   <div class="splide partners-splide">
     <div class="splide__track">
       <ul class="splide__list">
-        <li class="splide__slide"><div class="partner-item"><img src="assets/images/partners/1.png" alt="Partner 1"></div></li>
-        <li class="splide__slide"><div class="partner-item"><img src="assets/images/partners/2.png" alt="Partner 2"></div></li>
-        <li class="splide__slide"><div class="partner-item"><img src="assets/images/partners/3.png" alt="Partner 3"></div></li>
-        <li class="splide__slide"><div class="partner-item"><img src="assets/images/partners/4.png" alt="Partner 4"></div></li>
-        <li class="splide__slide"><div class="partner-item"><img src="assets/images/partners/5.png" alt="Partner 5"></div></li>
-        <li class="splide__slide"><div class="partner-item"><img src="assets/images/partners/6.png" alt="Partner 6"></div></li>
-        <li class="splide__slide"><div class="partner-item"><img src="assets/images/partners/7.png" alt="Partner 7"></div></li>
-        <li class="splide__slide"><div class="partner-item"><img src="assets/images/partners/8.png" alt="Partner 8"></div></li>
+        <li class="splide__slide">
+          <div class="partner-item">
+            <a href="https://www.technoserve.org" target="_blank" rel="noopener noreferrer">
+              <img src="assets/images/partners/1.png" alt="TechnoServe">
+              <p class="partner-caption">TechnoServe</p>
+            </a>
+          </div>
+        </li>
+        <li class="splide__slide">
+          <div class="partner-item">
+            <a href="https://www.agdevco.com/" target="_blank" rel="noopener noreferrer">
+              <img src="assets/images/partners/2.png" alt="AgDevCo">
+              <p class="partner-caption">AgDevCo</p>
+            </a>
+          </div>
+        </li>
+        <li class="splide__slide">
+          <div class="partner-item">
+            <a href="https://wellspring-development.com/" target="_blank" rel="noopener noreferrer">
+              <img src="assets/images/partners/3.png" alt="Wellspring">
+              <p class="partner-caption">Wellspring"</p>
+            </a>
+          </div>
+        </li>
+        <li class="splide__slide">
+          <div class="partner-item">
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              <img src="assets/images/partners/4.png" alt="AgroKIM">
+              <p class="partner-caption">AgroKIM</p>
+            </a>
+          </div>
+        </li>
+        <li class="splide__slide">
+          <div class="partner-item">
+            <a href="https://www.sketchbytes.com/" target="_blank" rel="noopener noreferrer">
+              <img src="assets/images/partners/5.png" alt="Sketchbytes">
+              <p class="partner-caption">Sketchbytes</p>
+            </a>
+          </div>
+        </li>
+        <li class="splide__slide">
+          <div class="partner-item">
+            <a href="https://empowersustainableenergy.com" target="_blank" rel="noopener noreferrer">
+              <img src="assets/images/partners/6.png" alt="Empower Sustainable Energy">
+              <p class="partner-caption">Empower Sustainable Energy</p>
+            </a>
+          </div>
+        </li>
+        <li class="splide__slide">
+          <div class="partner-item">
+            <a href="https://assamba.com" target="_blank" rel="noopener noreferrer">
+              <img src="assets/images/partners/7.png" alt="Assamba">
+              <p class="partner-caption">Assamba</p>
+            </a>
+          </div>
+        </li>
+        <li class="splide__slide">
+          <div class="partner-item">
+            <a href="cloudbhai.com" target="_blank" rel="noopener noreferrer">
+              <img src="assets/images/partners/8.png" alt="Cloudbhai">
+              <p class="partner-caption">Cloudbhai</p>
+            </a>
+          </div>
+        </li>
       </ul>
     </div>
   </div>
