@@ -18,20 +18,42 @@
   <link rel="icon" type="image/x-icon" href="/assets/images/favicon.png">
   <!-- Add Splide's CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
-  <!-- Google Translate Element -->
-  <script type="text/javascript">
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement({
-        pageLanguage: 'en',
-        includedLanguages: 'en,pt-PT',
-        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-        autoDisplay: false,
-        multilanguagePage: true,
-        gaTrack: false
-      }, 'google_translate_element');
+  <style>
+    .language-switcher {
+      position: absolute;
+      top: 20px;
+      right: 80px;
+      z-index: 2;
     }
-  </script>
-  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    .language-btn {
+      background-color: transparent;
+      border: 2px solid white;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: all 0.3s ease;
+    }
+
+    .language-btn:hover {
+      background-color: white;
+      color: #308106;
+    }
+
+    @media (max-width: 768px) {
+      .language-switcher {
+        top: 15px;
+        right: 60px;
+      }
+      
+      .language-btn {
+        padding: 6px 12px;
+        font-size: 12px;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -46,16 +68,16 @@
       <div id="myNav" class="overlay">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <div class="overlay-content">
-          <a href="https://blog.agritechmoz.com">Blog</a>
-          <a href="#section2">Services</a>
-          <a href="#section3">Methodology</a>
-          <a href="#section4">About us</a>
-          <a href="#section5">Contact</a>
+          <a href="https://blog.agritechmoz.com" data-en="Blog" data-pt="Blog">Blog</a>
+          <a href="#section2" data-en="Services" data-pt="Serviços">Services</a>
+          <a href="#section3" data-en="Methodology" data-pt="Metodologia">Methodology</a>
+          <a href="#section4" data-en="About us" data-pt="Sobre nós">About us</a>
+          <a href="#section5" data-en="Contact" data-pt="Contacto">Contact</a>
         </div>
       </div>
     
     <div class="language-switcher">
-      <div id="google_translate_element"></div>
+      <button class="language-btn" onclick="toggleLanguage()">EN|PT</button>
     </div>
     
     <span style="font-size:40px;cursor:pointer;color:white;position:absolute;right: 0;margin-right: 20px;" onclick="openNav()">&#9776;</span>
@@ -66,7 +88,10 @@
     <div class="container">
       <img src="assets/images/home-image-square.png" alt="hero image">
       <div class="hero-text">
-        <h1>FUSING THE POWER OF TECHNOLOGY & AGRICULTURE FOR A BETTER TOMORROW</h1>
+        <h1 data-en="FUSING THE POWER OF TECHNOLOGY & AGRICULTURE FOR A BETTER TOMORROW" 
+            data-pt="COMBINANDO O PODER DA TECNOLOGIA E AGRICULTURA PARA UM AMANHÃ MELHOR">
+          FUSING THE POWER OF TECHNOLOGY & AGRICULTURE FOR A BETTER TOMORROW
+        </h1>
       </div>
     </div>
   </main>
@@ -78,7 +103,11 @@
 
   <div class="services-section">
 
-    <h1 class="main-heading"  id="section2">OUR PRODUCTS AND SERVICES</h1>
+    <h1 class="main-heading" id="section2" 
+        data-en="OUR PRODUCTS AND SERVICES" 
+        data-pt="NOSSOS PRODUTOS E SERVIÇOS">
+      OUR PRODUCTS AND SERVICES
+    </h1>
 
     <div class="grid-container">
 
@@ -89,21 +118,16 @@
                 <img src="assets/images/Digital-Technical-Extention-dark.png" alt="globe">
               </div>
             <div class="card-title">
-              <h2 class="title">Digital Technical
-                Extension</h2>
+              <h2 class="title" data-en="Digital Technical Extension" data-pt="Extensão Técnica Digital">
+                Digital Technical Extension
+              </h2>
             </div>
 
             </div>
 
-            <p>
-            Our mobile technology is highly
-            customizable to fit the complex
-            workflows & real challenges of agriculture
-            and small business.
-            Coupled with our insightful reporting
-            & data analysis dashboard, your team
-            will be able to take technical extension
-            to the next level.
+            <p data-en="Our mobile technology is highly customizable to fit the complex workflows & real challenges of agriculture and small business. Coupled with our insightful reporting & data analysis dashboard, your team will be able to take technical extension to the next level."
+               data-pt="Nossa tecnologia móvel é altamente personalizável para se adequar aos fluxos de trabalho complexos e desafios reais da agricultura e pequenas empresas. Combinado com nosso painel de relatórios e análise de dados, sua equipe poderá levar a extensão técnica para o próximo nível.">
+            Our mobile technology is highly customizable to fit the complex workflows & real challenges of agriculture and small business. Coupled with our insightful reporting & data analysis dashboard, your team will be able to take technical extension to the next level.
             </p>
         
           </div>
@@ -115,20 +139,16 @@
                 <img src="assets/images/Agribusiness-Development-dark.png" alt="plant">
               </div>
             <div class="card-title">
-              <h2 class="title">Agribusiness
-                Development</h2>
+              <h2 class="title" data-en="Agribusiness Development" data-pt="Desenvolvimento de Agronegócio">
+                Agribusiness Development
+              </h2>
             </div>
 
             </div>
 
-            <p>
-              Our team will help your business reap
-              the full benefit of technology through
-              process analysis & optimization, field
-              training & support and operational
-              project management. The digital
-              transformation is now, and we will
-              help you reach it successfully!
+            <p data-en="Our team will help your business reap the full benefit of technology through process analysis & optimization, field training & support and operational project management. The digital transformation is now, and we will help you reach it successfully!"
+               data-pt="Nossa equipe ajudará seu negócio a colher todos os benefícios da tecnologia através de análise e otimização de processos, treinamento e suporte de campo e gerenciamento operacional de projetos. A transformação digital é agora, e nós ajudaremos você a alcançá-la com sucesso!">
+              Our team will help your business reap the full benefit of technology through process analysis & optimization, field training & support and operational project management. The digital transformation is now, and we will help you reach it successfully!
             </p>
         
           </div>
@@ -139,21 +159,16 @@
                 <img src="assets/images/Software-Development-Dark.png" class="software-development" alt="globe">
               </div>
             
-              <h2 class="title">Software Development &
-                Digital Marketing</h2>
+              <h2 class="title" data-en="Software Development & Digital Marketing" data-pt="Desenvolvimento de Software e Marketing Digital">
+                Software Development & Digital Marketing
+              </h2>
         
 
             </div>
 
-            <p>
-            Our mobile technology is highly
-            customizable to fit the complexity
-            workflows & real ties of agriculture
-            and small business.
-            Coupled with our insightful reporting
-            & data analysis dashboard, your team
-            will be able to take technical extension
-            to the next level.
+            <p data-en="Our mobile technology is highly customizable to fit the complexity workflows & real ties of agriculture and small business. Coupled with our insightful reporting & data analysis dashboard, your team will be able to take technical extension to the next level."
+               data-pt="Nossa tecnologia móvel é altamente personalizável para se adequar aos fluxos de trabalho complexos e laços reais da agricultura e pequenas empresas. Combinado com nosso painel de relatórios e análise de dados, sua equipe poderá levar a extensão técnica para o próximo nível.">
+            Our mobile technology is highly customizable to fit the complexity workflows & real ties of agriculture and small business. Coupled with our insightful reporting & data analysis dashboard, your team will be able to take technical extension to the next level.
             </p>
         
           </div>
@@ -161,7 +176,7 @@
 
     <div class="info-button">
 
-      <button><a href="#section5"><p>Contact us</p></a></button>
+      <button><a href="#section5"><p data-en="Contact us" data-pt="Contacte-nos">Contact us</p></a></button>
 
     </div>
 
@@ -175,31 +190,34 @@
   <div class="methodology-section">
 
     <div class="main-heading-section">
-    <h1 class="main-heading" id="section3">OUR METHODOLOGY</h1>
+    <h1 class="main-heading" id="section3" 
+        data-en="OUR METHODOLOGY" 
+        data-pt="NOSSA METODOLOGIA">
+      OUR METHODOLOGY
+    </h1>
   </div>
 
     <div class="grid-container">
 
       <div class="right-grid">
 
-      <div class="grid-item" style="padding-top: 5px; margin-bottom: 30px" >
+      <div class="grid-item" style="padding-top: 5px; margin-bottom: 30px">
             
           <div class="card-details">
           <div class="card-icon">
               <img src="assets/images/Business-Analysis-Dark.png" alt="globe">
             </div>
           <div class="card-title">
-            <h2 class="title b-analysis">Business Analysis</h2>
+            <h2 class="title b-analysis" data-en="Business Analysis" data-pt="Análise de Negócios">
+              Business Analysis
+            </h2>
           </div>
 
           </div>
 
-          <p>
-            Our very first step is to conduct a deep
-            study on all the processes involved in
-            your domain, so that we can really
-            understand your operations and
-            provide concise & impactful insights.
+          <p data-en="Our very first step is to conduct a deep study on all the processes involved in your domain, so that we can really understand your operations and provide concise & impactful insights."
+             data-pt="Nosso primeiro passo é realizar um estudo profundo de todos os processos envolvidos em seu domínio, para que possamos realmente entender suas operações e fornecer insights concisos e impactantes.">
+            Our very first step is to conduct a deep study on all the processes involved in your domain, so that we can really understand your operations and provide concise & impactful insights.
           </p>
       
         </div>
@@ -211,16 +229,16 @@
               <img src="assets/images/Solution-Design-Dark.png" alt="plant">
             </div>
           <div class="card-title">
-            <h2 class="title s-design">Solution Design</h2>
+            <h2 class="title s-design" data-en="Solution Design" data-pt="Design de Solução">
+              Solution Design
+            </h2>
           </div>
 
           </div>
 
-          <p>
-            Then, we think of ways in which our
-            software can be useful to you and see
-            if there are any specific modifications
-            that would increase your impact
+          <p data-en="Then, we think of ways in which our software can be useful to you and see if there are any specific modifications that would increase your impact"
+             data-pt="Em seguida, pensamos em maneiras pelas quais nosso software pode ser útil para você e vemos se há modificações específicas que aumentariam seu impacto">
+            Then, we think of ways in which our software can be useful to you and see if there are any specific modifications that would increase your impact
           </p>
       
         </div>
@@ -238,17 +256,16 @@
               <img src="assets/images/Solution-Development-Dark.png" alt="globe">
             </div>
           
-            <h2 class="title s-dev">Solutions Development</h2>
+            <h2 class="title s-dev" data-en="Solutions Development" data-pt="Desenvolvimento de Soluções">
+              Solutions Development
+            </h2>
       
 
           </div>
 
-          <p>
-            This is the moment in which we work
-            closely with your team to review, test,
-            pilot and improve the solution we
-            designed so that it fits perfectly into
-            your model and the market.
+          <p data-en="This is the moment in which we work closely with your team to review, test, pilot and improve the solution we designed so that it fits perfectly into your model and the market."
+             data-pt="Este é o momento em que trabalhamos em estreita colaboração com sua equipe para revisar, testar, pilotar e melhorar a solução que projetamos para que se encaixe perfeitamente em seu modelo e no mercado.">
+            This is the moment in which we work closely with your team to review, test, pilot and improve the solution we designed so that it fits perfectly into your model and the market.
           </p>
       
         </div>
@@ -260,17 +277,16 @@
               <img src="assets/images/Field-Deployment-Dark.png" alt="globe">
             </div>
           
-            <h2 class="title s-dep">Field Deployment</h2>
+            <h2 class="title s-dep" data-en="Field Deployment" data-pt="Implantação em Campo">
+              Field Deployment
+            </h2>
       
 
           </div>
 
-          <p>
-            Now that everything is ready, we can
-            go to the field to deploy the solutions
-            and provide technical and managerial
-            support. And how about you? Well,
-            you sit back and make money.
+          <p data-en="Now that everything is ready, we can go to the field to deploy the solutions and provide technical and managerial support. And how about you? Well, you sit back and make money."
+             data-pt="Agora que tudo está pronto, podemos ir a campo para implantar as soluções e fornecer suporte técnico e gerencial. E você? Bem, você relaxa e ganha dinheiro.">
+            Now that everything is ready, we can go to the field to deploy the solutions and provide technical and managerial support. And how about you? Well, you sit back and make money.
           </p>
       
         </div>
@@ -281,7 +297,7 @@
     </div>
     <div class="info-button">
       <a href="assets/Documents/AgritechMoz-Presentation.pdf" download>
-        <button><p>Download our Presentation</p></button>
+        <button><p data-en="Download our Presentation" data-pt="Baixe nossa Apresentação">Download our Presentation</p></button>
       </a>
     </div>
     
@@ -298,27 +314,20 @@
 
 <div class="about-section">
   <div class="about-text">
-    <h2 class="title" id="section4">WHO WE ARE</h2>
+    <h2 class="title" id="section4" data-en="WHO WE ARE" data-pt="QUEM SOMOS">WHO WE ARE</h2>
 
     <div class="innner-paragraph">
-    <p>
-      AgritechMoz is a digital consultancy firm
-specializing in agriculture and small
-business. Our team is composed of a group
-of experts from Mozambique & India, with a
-vast array of experience in software
-development, digital transformation, AI & IT
-consulting.</p> 
+    <p data-en="AgritechMoz is a digital consultancy firm specializing in agriculture and small business. Our team is composed of a group of experts from Mozambique & India, with a vast array of experience in software development, digital transformation, AI & IT consulting."
+       data-pt="A AgritechMoz é uma empresa de consultoria digital especializada em agricultura e pequenas empresas. Nossa equipe é composta por um grupo de especialistas de Moçambique e Índia, com vasta experiência em desenvolvimento de software, transformação digital, IA e consultoria em TI.">
+      AgritechMoz is a digital consultancy firm specializing in agriculture and small business. Our team is composed of a group of experts from Mozambique & India, with a vast array of experience in software development, digital transformation, AI & IT consulting.
+    </p> 
 
 <br>
 
-<p>With access to a robust network of
-cross-sectorial domain experts, branching
-out into digital marketing, health-tech and
-edtech our team can support in the planning
-& implementation of varied social
-development projects.
-    </p>
+<p data-en="With access to a robust network of cross-sectorial domain experts, branching out into digital marketing, health-tech and edtech our team can support in the planning & implementation of varied social development projects."
+   data-pt="Com acesso a uma robusta rede de especialistas em domínios intersetoriais, abrangendo marketing digital, health-tech e edtech, nossa equipe pode apoiar no planejamento e implementação de diversos projetos de desenvolvimento social.">
+  With access to a robust network of cross-sectorial domain experts, branching out into digital marketing, health-tech and edtech our team can support in the planning & implementation of varied social development projects.
+</p>
   </div>
    
   </div>
@@ -335,7 +344,9 @@ development projects.
 
 <div class="more-info">
 
-    <h1 class="main-heading">CREATING A GLOBAL IMPACT</h1>
+    <h1 class="main-heading" data-en="CREATING A GLOBAL IMPACT" data-pt="CRIANDO UM IMPACTO GLOBAL">
+      CREATING A GLOBAL IMPACT
+    </h1>
 
     <div class="grid-container">
 
@@ -346,16 +357,14 @@ development projects.
                 <img src="assets/images/Contries-Dark.png" alt="globe">
               </div>
             <div class="card-title">
-              <h2 class="title">5 Countries</h2>
+              <h2 class="title" data-en="5 Countries" data-pt="5 Países">5 Countries</h2>
             </div>
 
             </div>
 
-            <p>
-              Our team have experience in
-              conducting projects for clients in
-              Africa, Asia, Europe and North
-              America.
+            <p data-en="Our team have experience in conducting projects for clients in Africa, Asia, Europe and North America."
+               data-pt="Nossa equipe tem experiência em conduzir projetos para clientes na África, Ásia, Europa e América do Norte.">
+              Our team have experience in conducting projects for clients in Africa, Asia, Europe and North America.
             </p>
         
           </div>
@@ -367,17 +376,14 @@ development projects.
                 <img src="assets/images/Value-Chains-Dark.png" alt="plant">
               </div>
             <div class="card-title">
-              <h2 class="title">8 Value Chains</h2>
+              <h2 class="title" data-en="8 Value Chains" data-pt="8 Cadeias de Valor">8 Value Chains</h2>
             </div>
 
             </div>
 
-            <p>
-              Our collective experience spans work
-              in Agriculture (Cashew, Rice,
-              Sugarcane, Wheat, Potato), Finance
-              (Rural Banking, Cooperative
-              Management) and Poultry
+            <p data-en="Our collective experience spans work in Agriculture (Cashew, Rice, Sugarcane, Wheat, Potato), Finance (Rural Banking, Cooperative Management) and Poultry"
+               data-pt="Nossa experiência coletiva abrange trabalhos em Agricultura (Caju, Arroz, Cana-de-açúcar, Trigo, Batata), Finanças (Banco Rural, Gestão Cooperativa) e Avicultura">
+              Our collective experience spans work in Agriculture (Cashew, Rice, Sugarcane, Wheat, Potato), Finance (Rural Banking, Cooperative Management) and Poultry
             </p>
         
           </div>
@@ -388,16 +394,14 @@ development projects.
                 <img src="assets/images/Farmers-Dark.png" alt="globe">
               </div>
             
-              <h2 class="title">+300,000 farmers</h2>
+              <h2 class="title" data-en="+300,000 farmers" data-pt="+300.000 agricultores">+300,000 farmers</h2>
         
 
             </div>
 
-            <p>
-              Collectively, our team have supported
-              projects in the digital transformation
-              of over 300,000 smallholder farmers
-              across Africa & Asia.
+            <p data-en="Collectively, our team have supported projects in the digital transformation of over 300,000 smallholder farmers across Africa & Asia."
+               data-pt="Coletivamente, nossa equipe apoiou projetos na transformação digital de mais de 300.000 pequenos agricultores em toda a África e Ásia.">
+              Collectively, our team have supported projects in the digital transformation of over 300,000 smallholder farmers across Africa & Asia.
             </p>
         
           </div>
@@ -429,7 +433,7 @@ development projects.
 <!-- CONTACT US -->
 
 <div class="contact-us">
-  <h1 class="main-heading" id="section5">CONTACT US</h1>
+  <h1 class="main-heading" id="section5" data-en="CONTACT US" data-pt="CONTACTE-NOS">CONTACT US</h1>
 
 
 <div class="contact">
@@ -439,12 +443,12 @@ development projects.
   </div>
   <div class="contact-form">
       <form action="https://formspree.io/f/meqygqnn" method="post">
-          <input type="text" name="Name" placeholder="Name">
-          <input type="text" name="Phone" placeholder="Phone Number">
-          <input type="email" name="Email" placeholder="Email">
-          <input type="text" name="Subject" placeholder="Subject">
-          <textarea name="Message" placeholder="Message"></textarea>
-          <button type="submit"><p>Drop us a Message!</p></button>
+          <input type="text" name="Name" placeholder="Name" data-en-placeholder="Name" data-pt-placeholder="Nome">
+          <input type="text" name="Phone" placeholder="Phone Number" data-en-placeholder="Phone Number" data-pt-placeholder="Número de Telefone">
+          <input type="email" name="Email" placeholder="Email" data-en-placeholder="Email" data-pt-placeholder="Email">
+          <input type="text" name="Subject" placeholder="Subject" data-en-placeholder="Subject" data-pt-placeholder="Assunto">
+          <textarea name="Message" placeholder="Message" data-en-placeholder="Message" data-pt-placeholder="Mensagem"></textarea>
+          <button type="submit"><p data-en="Drop us a Message!" data-pt="Envie-nos uma Mensagem!">Drop us a Message!</p></button>
       </form>
   </div>
 </div>
@@ -461,7 +465,10 @@ development projects.
     <img src="assets/images/Agritech-logo.png">
   </div>
   <div class="footer-description">
-    <p>Copyright © Mobiz Agritechnologies Studio 2024. All Rights Reserved ®</p>
+    <p data-en="Copyright © Mobiz Agritechnologies Studio 2024. All Rights Reserved ®" 
+       data-pt="Copyright © Mobiz Agritechnologies Studio 2024. Todos os Direitos Reservados ®">
+      Copyright © Mobiz Agritechnologies Studio 2024. All Rights Reserved ®
+    </p>
   </div>
 </footer>
 
@@ -511,6 +518,41 @@ development projects.
   function closeNav() {
     document.getElementById("myNav").style.width = "0%";
   }
+
+  // Language switching functionality
+  let currentLang = 'en';
+  
+  function toggleLanguage() {
+    currentLang = currentLang === 'en' ? 'pt' : 'en';
+    updateLanguage();
+  }
+
+  function updateLanguage() {
+    // Update all elements with data-en and data-pt attributes
+    document.querySelectorAll('[data-en][data-pt]').forEach(element => {
+      element.textContent = element.getAttribute(`data-${currentLang}`);
+    });
+
+    // Update page title
+    document.title = currentLang === 'en' ? 'AgritechMoz' : 'AgritechMoz';
+
+    // Update meta description if needed
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.content = currentLang === 'en' 
+        ? 'AgritechMoz - Fusing the power of technology & agriculture for a better tomorrow'
+        : 'AgritechMoz - Combinando o poder da tecnologia e agricultura para um amanhã melhor';
+    }
+
+    // Update language button text
+    const langBtn = document.querySelector('.language-btn');
+    if (langBtn) {
+      langBtn.textContent = currentLang === 'en' ? 'EN' : 'PT';
+    }
+  }
+
+  // Initialize language
+  updateLanguage();
 </script>
 
 </body>
