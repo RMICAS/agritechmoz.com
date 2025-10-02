@@ -132,6 +132,53 @@ header {
 
   /* HERO SECTION END */
 
+  /* agritechmoz solutions */
+
+.agritechmoz-solutions {
+  background-image: url('../images/agritech-solutions.jpg');
+  background-size: cover;       /* Scales the image to cover the entire container */
+  background-position: center;  /* Centers the image */
+  background-repeat: no-repeat; /* Prevents tiling */
+  min-height: 650px;
+}
+
+.solutions-info {
+  margin-left: 50px;
+}
+
+.solutions-heading {
+    
+    color:#308206;
+    padding-top: 110px;
+    margin-bottom: 20px;
+    font-size: 38px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    position: relative; 
+  }
+
+.solutions-text {
+  color:#308106;
+  margin-bottom: 20px;
+  font-size: 19px;
+}
+
+.solutions-btn {
+  background-color:#7baf60;
+  color: white;
+  font-weight: bold;
+  font-size: 17px;
+  border-radius: 15px;
+  border-color: #7baf60;
+  padding: 12px 12px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+
+  /* agritechmoz solutions end */
+
   /* SERVICES */
 
  
@@ -915,6 +962,16 @@ footer {
   top: 20px;
   right: 80px;
   z-index: 2;
+
+    .language-btn {
+    background-color: rgba(255, 228, 196, 0);
+    border-color: white;
+    border-width: 1px;
+    color: white;
+    padding: 5px;
+    margin-top: 7px;
+    border-radius: 10px;
+  }
 }
 
 /* Google Translate Styles */

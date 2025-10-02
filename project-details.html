@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Project Details</title>
+<link rel="stylesheet" href="assets/CSS/style.css">
+<link rel="stylesheet" href="assets/CSS/project-details.css">
+</head>
+<body>
+
+<header>
+  
+    <div class="logo">
+      <img src="assets/images/Agritech-logo.png" alt="Logo" width="50">
+    </div>
+
+      <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+          <a href="https://agritechmoz.com/blog" data-en="Blog" data-pt="Blog">Blog</a>
+          <a href="projects.html" data-en="Projects" data-pt="Projetos">Projects</a>
+          <a href="#section2" data-en="Services" data-pt="Serviços">Services</a>
+          <a href="#section3" data-en="Methodology" data-pt="Metodologia">Methodology</a>
+          <a href="#section4" data-en="About us" data-pt="Sobre nós">About us</a>
+          <a href="#section5" data-en="Contact" data-pt="Contacto">Contact</a>
+        </div>
+      </div>
+    
+    <div class="language-switcher">
+      <button class="language-btn" onclick="toggleLanguage()">PT</button>
+    </div>
+    
+<span 
+  style="font-size:40px;cursor:pointer;color:white;position:absolute;top:10px;right:20px;" 
+  onclick="openNav()">
+  &#9776;
+</span> 
+      
+</header>
+
+<main class="project-details">
+    <h1 id="projectTitle"></h1>
+    <p class="subtitle" id="projectSubtitle"></p>
+
+  <div class="project-overview">
+    <div class="overview-grid">
+      <div class="overview-item">
+        <span class="label">Status</span>
+                <span class="value status-badge" id="projectStatus"></span>
+      </div>
+      <div class="overview-item">
+        <span class="label">Client</span>
+        <span class="value" id="projectClient"></span>
+      </div>
+      <div class="overview-item">
+        <span class="label">Location</span>
+        <span class="value" id="projectLocation"></span>
+      </div>
+      <div class="overview-item">
+        <span class="label">Category</span>
+        <span class="value" id="projectCategory"></span>
+      </div>
+      <div class="overview-item">
+        <span class="label">Year</span>
+        <span class="value" id="projectYear"></span>
+      </div>
+      <div class="overview-item">
+        <span class="label">Project URL</span>
+        <a class="value link" id="projectUrl" href="" target="_blank"></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="project-hero">
+        <img id="projectImage" src="assets/images/projects/agritechmoz_project.jpg" alt="">
+  </div>
+
+  <div class="project-content">
+    <section class="description-section">
+      <h2>Project Description</h2>
+      <p id="projectDescription"></p>
+    </section>
+
+    <section class="features-section">
+      <h2>Key Features</h2>
+      <ul id="projectFeatures">
+              </ul>
+    </section>
+
+    <section class="technologies-section">
+      <h2>Technologies Used</h2>
+      <div class="tech-tags" id="projectTechnologies">
+              </div>
+    </section>
+  </div>
+
+  <div class="project-actions">
+    <button class="btn btn-secondary" onclick="history.back()">
+      Back to Projects
+    </button>
+    <button class="btn btn-primary" onclick="window.open(document.getElementById('projectUrl').href, '_blank')">
+      Visit Project
+    </button>
+  </div>
+</main>
+
+<script>
+// Get URL parameters
+const params = new URLSearchParams(window.location.search);
+
+// Project data extraction and default values
+const projectData = {
+  title: params.get("title") || "Project Details Not Found",
+  // 🟢 CORRECTED: Updated default image path for root directory
+  image: params.get("image") || "assets/images/projects/agritechmoz_project.jpg",
+  description: params.get("description") || "Project description not available. Please ensure the project data is correctly passed from the projects page.",
+  status: params.get("status") || "Unknown",
+  client: params.get("client") || "Unknown",
+  location: params.get("location") || "Unknown",
+  url: params.get("url") || "#",
+  category: params.get("category") || "General",
+  year: params.get("year") || "Unknown"
+};
+
+// --- Helper Functions (unchanged logic) ---
+
+// Generate features based on project category
+function generateFeatures(category) {
+  const featureMap = {
+    "Energy": [
+      "Solar Microgrid Design & Implementation",
+      "SDG-Integrated Electrification",
+      "Community-Driven Infrastructure Development",
+      "Women's Empowerment in Energy",
+      "Energy Advocacy & Policy Development"
+    ],
+    "Farming": [
+      "Large-Scale Bamboo Cultivation & Nursery",
+      "Comprehensive Farmer & Community Training",
+      "Matutuíne Bamboo Park Rehabilitation",
+      "International Curriculum Development",
+      "Sustainable Expansion and Practice Training"
+    ],
+    "FinTech": [
+      "Simple & Accessible Web Application",
+      "Core Business Management Tools",
+      "Basic Performance Reporting",
+      "Intuitive Workflow Adoption",
+      "Mobile-First Local Adaptation"
+    ],
+    "Tourism": [
+        "Personalized Vacation Crafting",
+        "Extensive Option Guarantee",
+        "Intimate Travel Experience Focus",
+        "Customer-Centric Goal Setting",
+        "Comprehensive Travel Portfolio"
+    ],
+    "Health": [
+        "Unified Hospital Management Suite",
+        "Comprehensive Digital Medical Records (EMR)",
+        "Integrated Financial and Medical Analytics",
+        "Specialized Department Modules",
+        "Enhanced Communication & Patient Engagement"
+    ]
+  };
+  
+  return featureMap[category] || [
+    "Custom solution development",
+    "User experience optimization",
+    "Performance optimization",
+    "Security implementation",
+    "Scalable architecture"
+  ];
+}
+
+// Generate technologies based on project category
+function generateTechnologies(category) {
+  const techMap = {
+    "Energy": ["HTML5", "CSS3", "JavaScript"],
+    "Farming": ["HTML5", "CSS3", "JavaScript"],
+    "FinTech": ["PHP", "Laravel", "MySQL", "API Development"],
+    "Tourism": ["PHP", "Laravel", "PostgreSQL", "Tailwind CSS"],
+    "Health": ["Java", "Spring Boot", "MySQL", "Azure Cloud", "Docker"]
+  };
+  
+  return techMap[category] || ["HTML5", "CSS3", "JavaScript", "Responsive Design", "Modern Frameworks"];
+}
+
+// --- Population Logic ---
+
+// Populate primary content
+document.getElementById("projectTitle").textContent = projectData.title;
+document.getElementById("projectSubtitle").textContent = `${projectData.category} • ${projectData.year}`;
+document.getElementById("projectImage").src = projectData.image;
+document.getElementById("projectImage").alt = projectData.title;
+document.getElementById("projectDescription").textContent = projectData.description;
+
+// Populate overview grid
+const statusBadge = document.getElementById("projectStatus");
+statusBadge.textContent = projectData.status;
+// 🟢 IMPROVED: Adds a dynamic class for CSS styling based on the status (e.g., status-completed)
+statusBadge.className = `value status-badge ${projectData.status.toLowerCase().replace(' ', '-')}`;
+
+document.getElementById("projectClient").textContent = projectData.client;
+document.getElementById("projectLocation").textContent = projectData.location;
+document.getElementById("projectCategory").textContent = projectData.category;
+document.getElementById("projectYear").textContent = projectData.year;
+document.getElementById("projectUrl").textContent = projectData.url;
+document.getElementById("projectUrl").href = projectData.url;
+
+// Populate features
+const features = generateFeatures(projectData.category);
+const featuresList = document.getElementById("projectFeatures");
+featuresList.innerHTML = ''; // Clear content before populating
+features.forEach(feature => {
+  const li = document.createElement("li");
+  li.textContent = feature;
+  featuresList.appendChild(li);
+});
+
+// Populate technologies
+const technologies = generateTechnologies(projectData.category);
+const techContainer = document.getElementById("projectTechnologies");
+techContainer.innerHTML = ''; // Clear content before populating
+technologies.forEach(tech => {
+  const tag = document.createElement("span");
+  tag.className = "tech-tag";
+  tag.textContent = tech;
+  techContainer.appendChild(tag);
+});
+
+// Update page title
+document.title = `${projectData.title} - AgritechMoz`;
+
+// --- Overlay menu controls (unchanged) ---
+function openNav() {
+  document.getElementById("myNav").style.width = "100%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects</title>
+<link rel="stylesheet" href="assets/CSS/style.css">
+<link rel="stylesheet" href="assets/CSS/projects.css">
+</head>
+<body>
+
+  <header>
+  
+    <div class="logo">
+      <img src="assets/images/Agritech-logo.png" alt="Logo" width="50">
+    </div>
+
+      <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+          <a href="https://agritechmoz.com/blog" data-en="Blog" data-pt="Blog">Blog</a>
+          <a href="projects.html" data-en="Projects" data-pt="Projetos">Projects</a>
+          <a href="#section2" data-en="Services" data-pt="Serviços">Services</a>
+          <a href="#section3" data-en="Methodology" data-pt="Metodologia">Methodology</a>
+          <a href="#section4" data-en="About us" data-pt="Sobre nós">About us</a>
+          <a href="#section5" data-en="Contact" data-pt="Contacto">Contact</a>
+        </div>
+      </div>
+    
+    <div class="language-switcher">
+      <button class="language-btn" onclick="toggleLanguage()">PT</button>
+    </div>
+    
+<span 
+  style="font-size:40px;cursor:pointer;color:white;
+         position:absolute;top:10px;right:20px;" 
+  onclick="openNav()">
+  &#9776;
+</span>      
+  </header>
+
+<main class="projects-grid" id="projectsGrid">
+  <!-- JS will inject projects here -->
+</main>
+
+<script>
+const projects = [
+  {
+    id: 1,
+    title: "Empower Sustainable energy",
+    image: "assets/images/projects/empower_cover.jpg",
+    description: "Em 2024, a AgritechMoz foi selecionada para trabalhar com a empresa Empower Electrical, uma empresa liderada por mulheres, focada na consultoria e implementação de projetos energéticos para apoiar comunidades suburbanas em África do Sul, que enfrentam déficits no acesso à energia para o seu comércio.",
+    status: "Completed",
+    client: "Electrical Empower",
+    location: "Johannesburg, South Africa",
+    url: "https://empowersustainableenergy.com",
+    category: "Energy",
+    year: "2024"
+  },
+  {
+    id: 2,
+    title: "Assamba",
+    image: "assets/images/projects/assamba_cover.jpg",
+    description: "Em 2025, a AgritechMoz apoiou a ONG Assamba no desenvolvimento da sua página web para exibir os seus esforços na utilização do bambu como meio de gerar renda para comunidades e associações rurais em Moçambique.Moçambique. Baseada na Alemanha, com operações em Moçambique,a Assamba solicitou o apoio da Mobiz para a gestão da sua imagem digital ao longo de 2025, com enfoque no redesenho da sua página principal, para angariar fundos e participar em conferências.",
+    status: "Completed",
+    client: "Assamba",
+    location: "Maputo, Mozambique",
+    url: "https://assamba.com",
+    category: "Farming",
+    year: "2024"
+  },
+  {
+    id: 3,
+    title: "Mobiz",
+    image: "assets/images/projects/mobiz_cover.jpg",
+    description: "O projeto MoBiz consiste no desenvolvimento de uma aplicação web simples e acessível para apoiar a gestão de pequenas empresas e empreendedores individuais.",
+    status: "Completed",
+    client: "Mobiz Studio",
+    location: "Maputo, Mozambique",
+    url: "https://mobizstudio.com",
+    category: "FinTech",
+    year: "2022"
+  },
+  {
+    id: 4,
+    title: "Journey Routers",
+    image: "assets/images/projects/journey_cover.jpg",
+    description: "O projeto Journey Routers centrou-se no redesenho do website e na estratégia de marketing digital para uma empresa indiana especializada em pacotes de viagens acessíveis para clientes do Sudeste Asiático e do Médio Oriente.",
+    status: "Completed",
+    client: "Journey Routers",
+    location: "Mumbai, India",
+    url: "https://www.journeyrouters.com/",
+    category: "Tourism",
+    year: "2021"
+  },
+
+    {
+    id: 5,
+    title: "Sketchybytes",
+    image: "assets/images/projects/sketchybytes_cover.jpg",
+    description: "O projeto com a Sketchbytes envolveu consultoria especializada em duas fases distintas, focando no desenvolvimento de soluções digitais para a gestão de cuidados de saúde em hospitais públicos e privados por toda a Índia.A equipa prestou apoio na visualização de dados e na conceção do produto para a aplicação principal da empresa, contribuindo para a melhoria da experiência dos utilizadores e da eficiência na gestão clínica. A Sketchbytes oferece uma solução 360, abrangendo desde grandes hospitais até pequenas clínicas, com impacto em cerca de 1,5 milhões de doentes e 117 instituições de saúde. A colaboração ocorreu em maio de 2018 e novamente entre setembro e novembro de 2019.",
+    status: "Completed",
+    client: "Sketchybytes",
+    location: "Mumbai, India",
+    url: "https://sketchybytes.com",
+    category: "Health",
+    year: "2021"
+  }
+];
+
+const grid = document.getElementById("projectsGrid");
+projects.forEach(project => {
+  const card = document.createElement("div");
+  card.className = "project-card";
+  card.innerHTML = `
+    <img src="${project.image}" alt="${project.title}">
+    <div class="project-info">
+      <h2>${project.title}</h2>
+      <p class="description">${project.description.substring(0, 120)}...</p>
+      <div class="project-meta">
+        <span class="status ${project.status.toLowerCase().replace(' ', '-')}">${project.status}</span>
+        <span class="category">${project.category}</span>
+        <span class="year">${project.year}</span>
+      </div>
+    </div>
+  `;
+  card.addEventListener("click", () => {
+    const query = new URLSearchParams(project).toString();
+    window.location.href = `project-details.html?${query}`;
+  });
+  grid.appendChild(card);
+});
+</script>
+
+</body>
+</html>
