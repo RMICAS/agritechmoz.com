@@ -179,6 +179,7 @@ header {
 
   /* agritechmoz solutions end */
 
+
   /* SERVICES */
 
  
@@ -556,8 +557,65 @@ footer {
   .description {
       font-size: 1.5rem;
   }
+
+ /* agritechmoz solutions */
+
+.agritechmoz-solutions {
+display: none;
   }
-  
+
+
+  /* agritechmoz solutions mobile */
+
+.agritechmoz-solutions-mobile {
+  background-image: url('../images/mobile_solutions_tab.png');
+  background-size:contain;       /* Scales the image to cover the entire container */
+  background-position: center;  /* Centers the image */
+  background-repeat: no-repeat; /* Prevents tiling */
+  min-height: 550px;
+  align-items: center;
+  text-align: center;
+  margin-bottom: -100px;
+}
+
+.solutions-info-mobile {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.solutions-heading-mobile {
+    
+    color:#308206;
+    padding-top: 25px;
+    margin-bottom: 20px;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    position: relative; 
+  }
+
+.solutions-text-mobile {
+  color:#308106;
+  margin-bottom: 20px;
+  font-size: 17px;
+}
+
+.solutions-btn-mobile {
+  background-color:#7baf60;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  border-radius: 12px;
+  border-color: #7baf60;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 8px;
+  padding-right: 8px;
+
+}
+  /* agritechmoz solutions end */
+}
   @media (max-width: 430px) {
     .hero-text h1 {
       font-size: 1.5rem;
@@ -654,6 +712,10 @@ footer {
       margin-right: 10px;
     }
 
+    .agritechmoz-solutions {
+display: none;
+  }
+  
   }
 
     
@@ -1215,6 +1277,17 @@ footer {
         padding: 6px 12px !important;
         font-size: 12px !important;
     }
+}
+
+@media (min-width: 769px) {
+    /* agritechmoz solutions mobile */
+
+
+.agritechmoz-solutions-mobile {
+  display: none;
+}
+
+/* agritechmoz solutions mobile */
 }
 
 /* Override Google Translate dropdown text */
